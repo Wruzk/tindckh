@@ -34,7 +34,7 @@ module.exports.run = async function ({ api, event, args }) {
 
 // **Hàm kiểm tra tài khoản bị cấm**
 async function checkBanStatus(api, event, ffId) {
-  const banCheckUrl = `https://freefire-virusteam.vercel.app/bancheck?uid=${ffId}`;
+  const banCheckUrl = `https://freefire-virusteam.vercel.app/isbanned?uid=${ffId}`;
 
   try {
     const response = await axios.get(banCheckUrl);
