@@ -19,15 +19,14 @@
     "EMAIL": "",
     "PASSWORD": "",
     "OTPKEY": "",
-    "BOTNAME": "BLACK_GOKU",
-    "FACEBOOK_ADMIN": "https://www.facebook.com/culo2006",
+    "BOTNAME": "ảo ửa ít thôi",
+    "FACEBOOK_ADMIN": "https://www.facebook.com/khongnendauban",
     "PREFIX": "/",
     "ADMINBOT": [
-        "100039649635511",
-        "100068009795358"
+        "61564012386663"
     ],
     "NDH": [
-        "100039649635511"
+        "61564012386663"
     ],
     "DATABASE": {
         "sqlite": {
