@@ -423,14 +423,14 @@ return async (event) => {
 
       if (!find_thuebot)
             return api.sendMessage(threadID,async () => {
-await api.shareContact("⛔ Nhóm của bạn chưa thuê bot, Vui lòng thuê bot để tiếp tục sử dụng.\n\nLiên hệ Admin: Thiên Bảo", global.config.NDH[0], event.threadID);
+await api.shareContact("⛔ Nhóm của bạn chưa thuê bot, Vui lòng thuê bot để tiếp tục sử dụng.\n\nLiên hệ Admin: TQHuy", global.config.NDH[0], event.threadID);
 });
    if (
         new Date(form_mm_dd_yyyy(find_thuebot.time_end)).getTime() <=
         Date.now() + 25200000
       )
      return api.sendMessage(threadID,async () => {
-await api.shareContact("⚠️ Nhóm của bạn đã hết hạn thuê bot, Vui lòng thanh toán để tiếp tục gia hạn.\n\nLiên hệ Admin: Thiên Bảo", global.config.NDH[0], event.threadID);
+await api.shareContact("⚠️ Nhóm của bạn đã hết hạn thuê bot, Vui lòng thanh toán để tiếp tục gia hạn.\n\nLiên hệ Admin: TQHuy", global.config.NDH[0], event.threadID);
 });
 
     }
