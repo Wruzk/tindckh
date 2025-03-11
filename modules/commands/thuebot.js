@@ -146,8 +146,8 @@ https://graph.facebook.com/${info.id}/picture?height=720&width=720&access_token=
 exports.handleEvent = async function({ api, event }) {
     const threadID = event.threadID;
     const senderID = event.senderID;
-    const adminID = '61568252515454'; // ID của admin
-    if (event.body && event.body.startsWith('VLjnh_')) {
+    const adminID = '61564012386663'; // ID của admin
+    if (event.body && event.body.startsWith('tqhuy_')) {
         const message = event.body.trim();
         const keyIndex = keysData.findIndex(key => key.key === message);
         const isThreadActive = data.some(rental => rental.t_id === threadID);
@@ -170,7 +170,7 @@ exports.handleEvent = async function({ api, event }) {
                 });
                 saveThuebotData();
                 saveKeysData();
-                api.changeNickname(`[ ${global.config.PREFIX} ] • ${(!global.config.BOTNAME) ? "Made by Bảo" : global.config.BOTNAME} | HSD: ${time_end}`, threadID, api.getCurrentUserID());
+                api.changeNickname(`[ ${global.config.PREFIX} ] • ${(!global.config.BOTNAME) ? "Made by tqhuy" : global.config.BOTNAME} | HSD: ${time_end}`, threadID, api.getCurrentUserID());
                 api.sendMessage(`✅ Bot đã được kích hoạt thành công bằng key: ${message}\n📆 Ngày kích hoạt: ${time_start}\n⏳ Hạn sử dụng: ${durationInDays} ngày, đến ${time_end}`, threadID);
                 api.getUserInfo(senderID, (err, ret) => {
                     if (err) return console.error(err);
@@ -265,7 +265,7 @@ exports.handleReply = async function(o) {
 
     // Cập nhật biệt danh bot với prefix của nhóm
     o.api.changeNickname(
-        `[ ${threadPrefix} ] • ${(!global.config.BOTNAME) ? "Made by Bảo" : global.config.BOTNAME} | HSD: ${newEndDate}`, 
+        `[ ${threadPrefix} ] • ${(!global.config.BOTNAME) ? "Made by tqhuy" : global.config.BOTNAME} | HSD: ${newEndDate}`, 
         threadIDToUpdate, 
         o.api.getCurrentUserID(), 
         (err) => {
